@@ -19,7 +19,7 @@ card_value[10] = 10
 card_value[:jack] = 10
 card_value[:queen] = 10
 card_value[:king] = 10
-card_value[:ace] = 11
+card_value[:ace] = [11, 1]
 
 deck1.draw_card(player_hand)
 
@@ -27,16 +27,19 @@ deck1.draw_card(dealer_hand)
 
 deck1.draw_card(player_hand)
 puts "\nplayer's hand is: #{player_hand}"
+sleep(3)
 
 deck1.draw_card(dealer_hand)
 puts "\ndealer's first card is: #{dealer_hand[0]}"
+sleep(3)
 
 loop do
   puts "\nwould you like to hit or stay?"
   answer = gets.chomp.downcase
 	if answer == 'hit'
   	  deck1.draw_card(player_hand)
-  	  puts player_hand
+  	  puts "Player's hand is: #{player_hand}"
+      sleep(3)
   	elsif answer == 'stay'
   	  puts "\nplayer's hand is: #{player_hand}"
   	  puts "\ndealer's hand is: #{dealer_hand}"
@@ -47,6 +50,9 @@ end
 dealer_value = 0
 
 dealer_hand.each do |card|
+  if card[0] == :ace && dealer_value > 21
+    
+  end
   dealer_value += card_value[card[0]]
 end
 
