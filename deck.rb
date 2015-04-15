@@ -1,87 +1,21 @@
-Card = Struct.new(:type, :suit)
-
 class Deck
   attr_reader :card_order, :hand
   
   def initialize
-=begin
-    @hearts = [ Card.new(:"#{2}", :hearts),
-                Card.new(:"#{3}", :hearts),
-                Card.new(:"#{4}", :hearts),
-                Card.new(:"#{5}", :hearts),
-                Card.new(:"#{6}", :hearts),
-                Card.new(:"#{7}", :hearts),
-                Card.new(:"#{8}", :hearts),
-                Card.new(:"#{9}", :hearts),
-                Card.new(:"#{10}", :hearts),
-                Card.new(:jack, :hearts),
-                Card.new(:queen, :hearts),
-                Card.new(:king, :hearts),
-                Card.new(:ace, :hearts)
+    @hearts = [ [2, :hearts],
+                [3, :hearts],
+                [4, :hearts],
+                [5, :hearts],
+                [6, :hearts],
+                [7, :hearts],
+                [8, :hearts],
+                [9, :hearts],
+                [10, :hearts],
+                [:jack, :hearts],
+                [:queen, :hearts],
+                [:king, :hearts],
+                [:ace, :hearts]
                 ]
-
-    @spades = [ Card.new(:"#{2}", :spades),
-                Card.new(:"#{3}", :spades),
-                Card.new(:"#{4}", :spades),
-                Card.new(:"#{5}", :spades),
-                Card.new(:"#{6}", :spades),
-                Card.new(:"#{7}", :spades),
-                Card.new(:"#{8}", :spades),
-                Card.new(:"#{9}", :spades),
-                Card.new(:"#{10}", :spades),
-                Card.new(:jack, :spades),
-                Card.new(:queen, :spades),
-                Card.new(:king, :spades),
-                Card.new(:ace, :spades)
-                ]
-
-    @diamonds = [ Card.new(:"#{2}", :diamonds),
-                  Card.new(:"#{3}", :diamonds),
-                  Card.new(:"#{4}", :diamonds),
-                  Card.new(:"#{5}", :diamonds),
-                  Card.new(:"#{6}", :diamonds),
-                  Card.new(:"#{7}", :diamonds),
-                  Card.new(:"#{8}", :diamonds),
-                  Card.new(:"#{9}", :diamonds),
-                  Card.new(:"#{10}", :diamonds),
-                  Card.new(:jack, :diamonds),
-                  Card.new(:queen, :diamonds),
-                  Card.new(:king, :diamonds),
-                  Card.new(:ace, :diamonds)
-                  ]
-
-    @clubs = [ Card.new(:"#{2}", :clubs),
-               Card.new(:"#{3}", :clubs),
-               Card.new(:"#{4}", :clubs),
-               Card.new(:"#{5}", :clubs),
-               Card.new(:"#{6}", :clubs),
-               Card.new(:"#{7}", :clubs),
-               Card.new(:"#{8}", :clubs),
-               Card.new(:"#{9}", :clubs),
-               Card.new(:"#{10}", :clubs),
-               Card.new(:jack, :clubs),
-               Card.new(:queen, :clubs),
-               Card.new(:king, :clubs),
-               Card.new(:ace, :clubs)
-               ]
-
-    @card_order = @hearts + @spades + @diamonds + @clubs
-=end
-
-  @hearts = [ [2, :hearts],
-              [3, :hearts],
-              [4, :hearts],
-              [5, :hearts],
-              [6, :hearts],
-              [7, :hearts],
-              [8, :hearts],
-              [9, :hearts],
-              [10, :hearts],
-              [:jack, :hearts],
-              [:queen, :hearts],
-              [:king, :hearts],
-              [:ace, :hearts]
-              ]
 
     @spades = [ [2, :spades],
                 [3, :spades],
